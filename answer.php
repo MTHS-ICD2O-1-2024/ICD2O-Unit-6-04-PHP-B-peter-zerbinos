@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- ICS2O-Unit6-04-PHP -->
+<html lang="en-ca">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Volume of a Sphere Query String, with PHP" />
+  <meta name="keywords" content="mths, icd2o" />
+  <meta name="author" content="Peter Zerbinos" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-orange.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+  <link rel="manifest" href="./site.webmanifest" />
+  <title>Volume of a Sphere Query String, with PHP</title>
+</head>
+
+<body>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Volume of a Sphere Query String, with PHP</span>
+      </div>
+    </header>
+    <main class="mdl-layout__content">
+      <div class="right-image">
+        <img src="./images/volume_of_sphere.png" alt="sphere" />
+      </div>
+      <div class="page-content-formula">Formula</div>
+      <br />
+      <div class="page-content-formula">V = 4/3 π r³</div>
+      <br />
+      <?php
+      // Input
+      $radius = $_GET['radius'];
+
+      // Process
+      $volume = (4 / 3) * M_PI * $radius ** 3;
+
+      // Output
+      echo "<p>Radius: " . number_format($radius, 2) . " mm</p>";
+      echo "<p>Volume: " . number_format($volume, 2) . " mm³</p>";
+      ?>
+    </main>
+  </div>
+</body>
+
+</html>
